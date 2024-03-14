@@ -18,6 +18,16 @@ perguntas = {
     16: {"pergunta": "Você gosta de lidar com clientes no desenvolvimento de um projeto? [s/n] ", "sim": {"analise_sis"}, "nao": {"dados"}},
 }
 
+perguntasFinais = {
+    1: {"pergunta": "(Especifica) Você gostaria de trabalhar com dispositivos mobile? [s/n] ", "nao": {"back"}},
+    2: {"pergunta": "(Especifica) Front? [s/n] "},
+    3: {"pergunta": "(Especifica) Back? [s/n] "},
+    4: {"pergunta": "(Especifica) Análise? [s/n] ", "nao": {"back"}},
+    5: {"pergunta": "(Especifica) Dados? [s/n] ", "nao": {"back"}},
+    6: {"pergunta": "(Especifica) Segurança? [s/n] ", "nao": {"back"}},
+    7: {"pergunta": "(Especifica) Engenharia de Software? [s/n] ", "nao": {"back"}},
+}
+
 scores = {
     "apps": 0,
     "front": 0,
@@ -28,20 +38,23 @@ scores = {
     "eng_software": 0,
 }
 
-lista_perguntas= []
+lista_perguntas = []
 
 def perguntar(x):
     while(len(lista_perguntas) < x):
+        for area in scores:
+            if scores[area] == 5:
+                perguntarFinal(area.index)
         a = randint(1, x)
         if a not in lista_perguntas:
             print("/--------------/")
             b = str(input(perguntas[a]["pergunta"]))
             if b[0] == "s" or b[0] == "S":
                 for score in perguntas[a]["sim"]:
-                    scores[score] += 10
+                    scores[score] += 1
             elif b[0] == "n" or b[0] == "N":
                 for score in perguntas[a]["nao"]:
-                    scores[score] += 10
+                    scores[score] += 1
             else:
                 print("Input inválido, insira apenas [s] ou [n]")
                 continue
@@ -50,3 +63,35 @@ def perguntar(x):
     print("/--------------/")
     print("Fim do programa. Resultados:")
     return scores
+
+def perguntarFinal(area):
+    resposta = str(input(perguntasFinais[area]["pergunta"]))
+    if area == 2 or area == 3:
+        if resposta[0] == "s" or resposta[0] == "S":
+            encerrarPrograma(2)
+        elif resposta[0] == "n" or resposta[0] == "N":
+            encerrarPrograma(3)
+    else:
+        if resposta[0] == "s" or resposta[0] == "S":
+            encerrarPrograma(area)
+        elif resposta[0] == "n" or resposta[0] == "N":
+            scores[area] += 1
+
+
+def encerrarPrograma(vencedor):
+    print("Resultado: ")
+    match(vencedor):
+        case 1:
+            print("Apps")
+        case 2:
+            print("Front End")
+        case 3:
+            print("Back End")
+        case 4:
+            print("Analise de Sistemas")
+        case 5:
+            print("Dados")
+        case 6:
+            print("Segurança")
+        case 7:
+            print("Engenharia de Software")
