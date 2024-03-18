@@ -40,7 +40,7 @@ scores = {
 
 lista_perguntas = []
 
-def perguntar(x):
+def perguntarAmplas(x):
     while(len(lista_perguntas) < x):
         for area in scores:
             if scores[area] == 5:
@@ -63,6 +63,27 @@ def perguntar(x):
     print("/--------------/")
     print("Fim do programa. Resultados:")
     return scores
+
+def checar_vencedor():
+    for area in scores:
+        if scores[area] == 5:
+            return True
+        else:
+            return False
+
+def perguntar_especifico(y = 16):
+    while checar_vencedor() is False:
+        c = randint(6, y)
+        if c not in lista_perguntas:
+            d = str(input(perguntas[c]["pergunta"]))
+            lista_perguntas.append(c)
+            if d[0] == 's' or d[0] == 'S':
+                for score in perguntas[d]["sim"]:
+                    score[scores] += 1
+            elif d[0] == 'n' or d[0] == 'N':
+                for score in perguntas[d]["nao"]:
+                    score[scores] += 1
+
 
 def perguntarFinal(area):
     resposta = str(input(perguntasFinais[area]["pergunta"]))
