@@ -41,6 +41,21 @@ scores = {
 
 lista_perguntas = []
 
+def checar_vencedor():
+    for area in scores:
+        if scores[area] == 5:
+            return area
+    return -1
+
+def checar_maior():
+    maior = -999
+    indice_maior = -999
+    for area in scores:
+        if scores[area] > maior:
+            maior = scores[area]
+            indice_maior = area
+    return indice_maior
+
 def perguntarAmplas(x = 5):
     while(len(lista_perguntas) < x):
         for area in scores:
@@ -61,20 +76,6 @@ def perguntarAmplas(x = 5):
                 continue
             lista_perguntas.append(a)
 
-def checar_vencedor():
-    for area in scores:
-        if scores[area] == 5:
-            return area
-    return -1
-
-def checar_maior():
-    maior = -999
-    indice_maior = -999
-    for area in scores:
-        if scores[area] > maior:
-            maior = scores[area]
-            indice_maior = area
-    return indice_maior
 
 def perguntar_especifico(y = 14):
     print("/--------------/")
@@ -105,27 +106,58 @@ def perguntarFinal(area):
         perguntar_especifico()
 
 def encerrarPrograma(vencedor):
-    print("Resultado: ")
+    print("----- Resultado -----")
     if vencedor == "apps":
         print("Apps")
     elif vencedor == "front":
         print("Front End")
+        print("""
+            Front-end refere-se à criação da interface de usuário de sites e aplicativos web. 
+            Desenvolvedores Front-end usam HTML, CSS e JavaScript para projetar e 
+            implementar elementos visuais e interativos. Eles colaboram com designers e desenvolvedores Back-end
+            para criar experiências de usuário intuitivas e responsivas. 
+        """)
     elif vencedor == "back":
         print("Back End")
+        print("""
+            Back-end é a parte do desenvolvimento web que lida com a lógica e o armazenamento de dados
+            por trás de um site ou aplicativo. Os desenvolvedores Back-end usam linguagens como Python,
+            Java ou Ruby para criar e manter servidores, APIs e bancos de dados. Eles garantem a segurança,
+            escalabilidade e desempenho do sistema, trabalhando em colaboração com equipes de Front-end e DevOps.
+        """)
     elif vencedor == "analise_sis":
         print("Analise de Sistemas")
+        print("""
+            Análise de Sistemas é o processo de entender as necessidades de um sistema de informação,
+            identificar problemas e propor soluções por meio do uso de tecnologia da informação. 
+            Os analistas de sistemas utilizam técnicas de investigação e modelagem para projetar 
+            sistemas que atendam às demandas organizacionais e melhorem a eficiência dos processos.
+        """)
     elif vencedor == "dados":
         print("Dados")
+        print("""
+            Cientista de Dados é um profissional que analisa grandes conjuntos de dados usando técnicas estatísticas
+            e de machine learning para extrair insights e informação útil. Eles usam ferramentas como Python e R 
+            para processar e visualizar dados, ajudando as organizações a tomar decisões informadas e estratégicas.""")
     elif vencedor == "seguranca":
-        print("Segurança")
+        print("Segurança da Informação")
+        print("""
+            Segurança da Informação abrange medidas e práticas para proteger dados e sistemas contra ameaças.
+            Isso inclui técnicas como criptografia, controle de acesso e monitoramento para garantir a confidencialidade,
+            integridade e disponibilidade das informações, visando mitigar riscos de segurança.
+        """)
     elif vencedor == "eng_software":
         print("Engenharia de Software")
+        print("""
+            Engenharia de Software é a aplicação de princípios de engenharia para desenvolver software de forma eficiente.
+            Envolve análise de requisitos, design, implementação, teste e manutenção de sistemas de software. 
+            O objetivo é produzir software de alta qualidade, entregue dentro do prazo e do orçamento estabelecidos.
+              """)
 
 def main():
     print("Iniciando o programa.")
     perguntarAmplas()
     perguntar_especifico()
-    print(f"Scores finais: {scores}")
 
 if __name__ == '__main__':
     main()
