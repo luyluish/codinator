@@ -76,7 +76,6 @@ def perguntarAmplas(x = 5):
                 continue
             lista_perguntas.append(a)
 
-
 def perguntar_especifico(y = 14):
     print("/--------------/")
     while checar_vencedor() == -1:
@@ -121,44 +120,45 @@ def encerrarPrograma(vencedor):
             \033[1;36mFront-end refere-se à criação da interface de usuário de sites e aplicativos web. 
             Desenvolvedores Front-end usam HTML, CSS e JavaScript para projetar e 
             implementar elementos visuais e interativos. Eles colaboram com designers e desenvolvedores Back-end
-            \033[mpara criar experiências de usuário intuitivas e responsivas. 
-        """)
+            para criar experiências de usuário intuitivas e responsivas. 
+            \033[m""")
     elif vencedor == "back":
         print("Back End")
         print("""
             \033[1;36mBack-end é a parte do desenvolvimento web que lida com a lógica e o armazenamento de dados
             por trás de um site ou aplicativo. Os desenvolvedores Back-end usam linguagens como Python,
             Java ou Ruby para criar e manter servidores, APIs e bancos de dados. Eles garantem a segurança,
-            \033[mescalabilidade e desempenho do sistema, trabalhando em colaboração com equipes de Front-end e DevOps.
-        """)
+            escalabilidade e desempenho do sistema, trabalhando em colaboração com equipes de Front-end e DevOps.
+            \033[m""")
     elif vencedor == "analise_sis":
         print("Analise de Sistemas")
         print("""
             \033[1;36mAnálise de Sistemas é o processo de entender as necessidades de um sistema de informação,
             identificar problemas e propor soluções por meio do uso de tecnologia da informação. 
             Os analistas de sistemas utilizam técnicas de investigação e modelagem para projetar 
-            \033[msistemas que atendam às demandas organizacionais e melhorem a eficiência dos processos.
-        """)
+            sistemas que atendam às demandas organizacionais e melhorem a eficiência dos processos.
+            \033[m""")
     elif vencedor == "dados":
         print("Dados")
         print("""
             \033[1;36mCientista de Dados é um profissional que analisa grandes conjuntos de dados usando técnicas estatísticas
             e de machine learning para extrair insights e informação útil. Eles usam ferramentas como Python e R 
-            \033[mpara processar e visualizar dados, ajudando as organizações a tomar decisões informadas e estratégicas.""")
+            para processar e visualizar dados, ajudando as organizações a tomar decisões informadas e estratégicas.
+            \033[m""")
     elif vencedor == "seguranca":
         print("Segurança da Informação")
         print("""
             \033[1;36mSegurança da Informação abrange medidas e práticas para proteger dados e sistemas contra ameaças.
             Isso inclui técnicas como criptografia, controle de acesso e monitoramento para garantir a confidencialidade,
-            \033[mintegridade e disponibilidade das informações, visando mitigar riscos de segurança.
-        """)
+            integridade e disponibilidade das informações, visando mitigar riscos de segurança.
+            \033[m""")
     elif vencedor == "eng_software":
         print("Engenharia de Software")
         print("""
             \033[1;36mEngenharia de Software é a aplicação de princípios de engenharia para desenvolver software de forma eficiente.
             Envolve análise de requisitos, design, implementação, teste e manutenção de sistemas de software. 
             O objetivo é produzir software de alta qualidade, entregue dentro do prazo e do orçamento estabelecidos.
-              \033[m""")
+            \033[m""")
 
 def main():
     print("Iniciando o programa.")
