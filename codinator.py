@@ -109,50 +109,56 @@ def encerrarPrograma(vencedor):
     print("----- Resultado -----")
     if vencedor == "apps":
         print("Apps")
+        print("""
+            \033[1;36mDesenvolvimento de Aplicativos é o processo de criação de software para dispositivos
+            móveis ou computadores. Envolve design, codificação, teste e implementação de aplicativos
+            usando linguagens de programação específicas da plataforma. O objetivo é criar aplicativos
+            funcionais e intuitivos que atendam às necessidades dos usuários.
+            \033[m""")
     elif vencedor == "front":
         print("Front End")
         print("""
-            Front-end refere-se à criação da interface de usuário de sites e aplicativos web. 
+            \033[1;36mFront-end refere-se à criação da interface de usuário de sites e aplicativos web. 
             Desenvolvedores Front-end usam HTML, CSS e JavaScript para projetar e 
             implementar elementos visuais e interativos. Eles colaboram com designers e desenvolvedores Back-end
-            para criar experiências de usuário intuitivas e responsivas. 
+            \033[mpara criar experiências de usuário intuitivas e responsivas. 
         """)
     elif vencedor == "back":
         print("Back End")
         print("""
-            Back-end é a parte do desenvolvimento web que lida com a lógica e o armazenamento de dados
+            \033[1;36mBack-end é a parte do desenvolvimento web que lida com a lógica e o armazenamento de dados
             por trás de um site ou aplicativo. Os desenvolvedores Back-end usam linguagens como Python,
             Java ou Ruby para criar e manter servidores, APIs e bancos de dados. Eles garantem a segurança,
-            escalabilidade e desempenho do sistema, trabalhando em colaboração com equipes de Front-end e DevOps.
+            \033[mescalabilidade e desempenho do sistema, trabalhando em colaboração com equipes de Front-end e DevOps.
         """)
     elif vencedor == "analise_sis":
         print("Analise de Sistemas")
         print("""
-            Análise de Sistemas é o processo de entender as necessidades de um sistema de informação,
+            \033[1;36mAnálise de Sistemas é o processo de entender as necessidades de um sistema de informação,
             identificar problemas e propor soluções por meio do uso de tecnologia da informação. 
             Os analistas de sistemas utilizam técnicas de investigação e modelagem para projetar 
-            sistemas que atendam às demandas organizacionais e melhorem a eficiência dos processos.
+            \033[msistemas que atendam às demandas organizacionais e melhorem a eficiência dos processos.
         """)
     elif vencedor == "dados":
         print("Dados")
         print("""
-            Cientista de Dados é um profissional que analisa grandes conjuntos de dados usando técnicas estatísticas
+            \033[1;36mCientista de Dados é um profissional que analisa grandes conjuntos de dados usando técnicas estatísticas
             e de machine learning para extrair insights e informação útil. Eles usam ferramentas como Python e R 
-            para processar e visualizar dados, ajudando as organizações a tomar decisões informadas e estratégicas.""")
+            \033[mpara processar e visualizar dados, ajudando as organizações a tomar decisões informadas e estratégicas.""")
     elif vencedor == "seguranca":
         print("Segurança da Informação")
         print("""
-            Segurança da Informação abrange medidas e práticas para proteger dados e sistemas contra ameaças.
+            \033[1;36mSegurança da Informação abrange medidas e práticas para proteger dados e sistemas contra ameaças.
             Isso inclui técnicas como criptografia, controle de acesso e monitoramento para garantir a confidencialidade,
-            integridade e disponibilidade das informações, visando mitigar riscos de segurança.
+            \033[mintegridade e disponibilidade das informações, visando mitigar riscos de segurança.
         """)
     elif vencedor == "eng_software":
         print("Engenharia de Software")
         print("""
-            Engenharia de Software é a aplicação de princípios de engenharia para desenvolver software de forma eficiente.
+            \033[1;36mEngenharia de Software é a aplicação de princípios de engenharia para desenvolver software de forma eficiente.
             Envolve análise de requisitos, design, implementação, teste e manutenção de sistemas de software. 
             O objetivo é produzir software de alta qualidade, entregue dentro do prazo e do orçamento estabelecidos.
-              """)
+              \033[m""")
 
 def main():
     print("Iniciando o programa.")
