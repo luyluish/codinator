@@ -3,30 +3,30 @@ from random import randint
 print("\033[1;34mBEM VINDO AO CODINATOR !!\033[m")
 
 perguntas = {
-    1:  {"pergunta": "(Ampla) Você se considera um bom líder em grupos? [s/n] ", "sim": {"eng_software"}, "nao": {"front"}},
-    2:  {"pergunta": "(Ampla) Você prefere trabalhar sozinho e não receber ordens? [s/n] ", "sim": {"eng_software", "analise_sis"}, "nao": {"front"}},
-    3:  {"pergunta": "(Ampla) Você traz ideias novas constantemente para resolver problemas? [s/n] ", "sim": {"eng_software", "analise_sis"}, "nao": {"front"}},
-    4:  {"pergunta": "(Ampla) Você se considera uma pessoa criativa? [s/n] ", "sim": {"front", "apps"}, "nao": {"dados"}},
-    5:  {"pergunta": "(Ampla) Você se considera uma pessoa organizada? [s/n] ", "sim": {"eng_software", "analise_sis"}, "nao": {"front"}},
+    1:  {"pergunta": "Você se considera um bom líder em grupos? [s/n] ", "sim": {"eng_software", "back"}, "nao": {"front"}},
+    2:  {"pergunta": "Você prefere trabalhar sozinho e não receber ordens? [s/n] ", "sim": {"front"}, "nao": {"eng_software", "analise_sis", "back", "seguranca"}},
+    3:  {"pergunta": "Você traz ideias novas constantemente para resolver problemas? [s/n] ", "sim": {"eng_software", "analise_sis", "back", "seguranca"}, "nao": {"front"}},
+    4:  {"pergunta": "Você se considera uma pessoa criativa? [s/n] ", "sim": {"front", "apps", "seguranca"}, "nao": {"dados"}},
+    5:  {"pergunta": "Você se considera uma pessoa organizada? [s/n] ", "sim": {"eng_software", "analise_sis", "back", "seguranca"}, "nao": {"front"}},
     6:  {"pergunta": "Você gosta de construir coisas novas? [s/n] ", "sim": {"eng_software", "apps", "back", "front"}, "nao": {"seguranca"}},
     7:  {"pergunta": "Você é contratado de alguma empresa? [s/n] ", "sim": {"eng_software", "seguranca", "dados", "back"}, "nao": {"front"}},
     8:  {"pergunta": "Você tem interesse em trabalhar na web? [s/n] ", "sim": {"eng_software", "front", "back", "analise_sis"}, "nao": {"dados", "apps", "seguranca"}},
-    9:  {"pergunta": "Você gosta de matemática e lógica? [s/n] ", "sim": {"dados", "analise_sis", "eng_software", "back"}, "nao": {"front"}},
+    9:  {"pergunta": "Você gosta de matemática e lógica? [s/n] ", "sim": {"dados", "analise_sis", "eng_software", "back", "seguranca"}, "nao": {"front"}},
     10: {"pergunta": "Você gosta de estatística ou finanças? [s/n] ", "sim": {"eng_software", "analise_sis"}, "nao": {"front"}},
     11: {"pergunta": "Você trabalharia com um alto volume de informações? [s/n] ", "sim": {"dados", "seguranca", "back"}, "nao": {"front", "apps"}},
-    12: {"pergunta": "Você gostaria de expressar seu lado artístico no seu trabalho? [s/n] ", "sim": {"front", "apps"}, "nao": {"dados", "seguranca"}},
-    13: {"pergunta": "Você gostaria de trabalhar criando jogos? [s/n] ", "sim": {"apps"}, "nao": {"dados", "seguranca"}},
-    14: {"pergunta": "Você gosta de lidar diretamente com clientes no desenvolvimento de um projeto? [s/n] ", "sim": {"front", "analise_sis", }, "nao": {"dados", "seguranca"}}
+    12: {"pergunta": "Você gostaria de expressar seu lado artístico no seu trabalho? [s/n] ", "sim": {"front", "apps"}, "nao": {"dados", "seguranca", "back"}},
+    13: {"pergunta": "Você gostaria de trabalhar criando jogos? [s/n] ", "sim": {"apps", "back"}, "nao": {"dados", "seguranca"}},
+    14: {"pergunta": "Você gosta de lidar diretamente com clientes no desenvolvimento de um projeto? [s/n] ", "sim": {"front", "analise_sis", }, "nao": {"dados", "seguranca", "back"}}
 }
 
 perguntasFinais = {
-    "apps": {"pergunta": "(Especifica) Você gostaria de trabalhar com dispositivos mobile? [s/n] "},
-    "front": {"pergunta": "(Específica) Você gosta de design ou desenho? [s/n] "},
-    "back": {"pergunta": "(Especifica) Back? [s/n] "},
-    "analise_sis": {"pergunta": "(Especifica) Análise? [s/n] "},
-    "seguranca": {"pergunta": "(Especifica) Dados? [s/n] "},
-    "dados": {"pergunta": "(Especifica) Segurança? [s/n] "},
-    "eng_software": {"pergunta": "(Especifica) Engenharia de Software? [s/n] "}
+    "apps": {"pergunta": "Você gostaria de trabalhar com dispositivos mobile? [s/n] "},
+    "front": {"pergunta": "Você gosta de design ou desenho? [s/n] "},
+    "back": {"pergunta": "Você gostaria de trabalhar na parte lógica e operacional dentro de um ambiente web? [s/n] "},
+    "analise_sis": {"pergunta": "Você gosta de explorar conteúdos de maneira minuciosa, analisando detalhes de cada estrutura? [s/n] "},
+    "seguranca": {"pergunta": "Você gostaria de proteger a empresa em que trabalha ciberneticamente? [s/n] "},
+    "dados": {"pergunta": "Você gostaria de coletar e interpretar dados fornecidos a você da empresa em que trabalha? [s/n] "},
+    "eng_software": {"pergunta": "Você gostaria de ser responsável por projetar, desenvolver e manter sistemas de softwares? [s/n] "}
 }
 
 scores = {
